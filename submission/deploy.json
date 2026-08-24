@@ -1,0 +1,11 @@
+{
+  "llama_cpp_tag": "b10566",
+  "gguf": "gguf\\lab22-dpo-Q4_K_M.gguf",
+  "size_bytes": 1929902464,
+  "size_gb": 1.797,
+  "quantization": "Q4_K_M",
+  "prompt": "Viết một câu tiếng Việt giải thích học máy là gì.",
+  "response": "Học máy là một lĩnh vực trong trí tuệ nhân tạo, trong đó máy tính được huấn luyện để học từ dữ liệu và tự cải thiện qua thời gian.",
+  "coherent_vietnamese": true,
+  "stdout_log": "submission\\llama_smoke.stdout.txt"
+}

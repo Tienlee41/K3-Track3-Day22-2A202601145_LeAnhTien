@@ -1,0 +1,3 @@
+<|im_start|>user
+Viết một câu tiếng Việt giải thích học máy là gì.<|im_end|>
+<|im_start|>assistant

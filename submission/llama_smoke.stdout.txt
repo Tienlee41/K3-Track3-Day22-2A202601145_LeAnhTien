@@ -1,0 +1,37 @@
+
+
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b10566-bb4caa754
+model      : D:\aia\K3-Track3-Day22-2A202601145_LeAnhTien\gguf\lab22-dpo-Q4_K_M.gguf
+ftype      : Q4_K - Medium
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> <|im_start|>user
+Viết một câu tiếng Việt giải thích học máy là gì.<|im_end|>
+<|im_start|>assistant
+Học máy là một lĩnh vực trong trí tuệ nhân tạo, trong đó máy tính được huấn luyện để học từ dữ liệu và tự cải thiện qua thời gian.
+
+[ Prompt: 169.9 t/s | Generation: 16.5 t/s ]
+
+> 
+> 
+
+Exiting...
