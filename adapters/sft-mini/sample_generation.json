@@ -1,0 +1,5 @@
+{
+  "prompt": "Giải thích ngắn gọn vì sao cần tập validation trong học máy.",
+  "response": "Tập validation là một bước quan trọng trong quá trình huấn luyện mô hình học máy. Nó giúp đánh giá hiệu suất của mô hình trên một bộ dữ liệu kiểm tra riêng biệt mà không được sử dụng trong quá trình huấn luyện. Thông qua việc so sánh kết quả dự đoán từ mô hình với các giá trị thực tế trong tập validation, chúng ta có thể xác định mức độ chính xác và khả năng dự đoán của mô hình. Điều này giúp chúng ta có cái nhìn tổng quan về hiệu suất của mô hình và điều chỉnh các tham số để tối ưu hóa",
+  "coherent_vietnamese": true
+}

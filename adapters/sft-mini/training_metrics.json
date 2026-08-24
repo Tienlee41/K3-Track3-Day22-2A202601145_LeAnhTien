@@ -1,0 +1,119 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5060 Ti",
+  "vram_total_gb": 15.93,
+  "cuda_runtime": "12.8",
+  "torch": "2.9.0+cu128",
+  "base_model": "unsloth/Qwen2.5-3B-Instruct-bnb-4bit",
+  "dataset": "bkai-foundation-models/vi-alpaca",
+  "samples": 1000,
+  "epochs": 1.0,
+  "runtime_seconds": 433.502,
+  "train_loss": 0.9615823287963867,
+  "peak_vram_gb": 3.099,
+  "loss_history": [
+    {
+      "step": 1,
+      "loss": 2.0063
+    },
+    {
+      "step": 5,
+      "loss": 1.3914
+    },
+    {
+      "step": 10,
+      "loss": 1.0091
+    },
+    {
+      "step": 15,
+      "loss": 1.0331
+    },
+    {
+      "step": 20,
+      "loss": 0.952
+    },
+    {
+      "step": 25,
+      "loss": 0.896
+    },
+    {
+      "step": 30,
+      "loss": 0.9806
+    },
+    {
+      "step": 35,
+      "loss": 0.9
+    },
+    {
+      "step": 40,
+      "loss": 1.0359
+    },
+    {
+      "step": 45,
+      "loss": 0.9257
+    },
+    {
+      "step": 50,
+      "loss": 0.9339
+    },
+    {
+      "step": 55,
+      "loss": 0.9707
+    },
+    {
+      "step": 60,
+      "loss": 0.9253
+    },
+    {
+      "step": 65,
+      "loss": 0.9124
+    },
+    {
+      "step": 70,
+      "loss": 0.9163
+    },
+    {
+      "step": 75,
+      "loss": 0.958
+    },
+    {
+      "step": 80,
+      "loss": 0.9471
+    },
+    {
+      "step": 85,
+      "loss": 0.8619
+    },
+    {
+      "step": 90,
+      "loss": 0.9607
+    },
+    {
+      "step": 95,
+      "loss": 0.9295
+    },
+    {
+      "step": 100,
+      "loss": 0.8095
+    },
+    {
+      "step": 105,
+      "loss": 0.9537
+    },
+    {
+      "step": 110,
+      "loss": 0.9226
+    },
+    {
+      "step": 115,
+      "loss": 0.8992
+    },
+    {
+      "step": 120,
+      "loss": 0.9432
+    },
+    {
+      "step": 125,
+      "loss": 0.9488
+    }
+  ]
+}
