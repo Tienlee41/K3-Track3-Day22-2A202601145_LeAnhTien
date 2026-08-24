@@ -1,6 +1,9 @@
 .venv/
+.venv-gpu/
+.venv-export/
 __pycache__/
 *.pyc
+*.egg-info/
 .pytest_cache/
 .ruff_cache/
 .mypy_cache/
@@ -8,4 +11,10 @@ outputs/
 wandb/
 *.safetensors
 *.bin
+checkpoints/
+gguf/*.gguf
+gguf/merged-hf/
+tools/llama.cpp/
+tools/llama.cpp-extract/
+tools/downloads/
 .env

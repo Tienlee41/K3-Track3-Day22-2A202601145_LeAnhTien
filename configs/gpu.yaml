@@ -1,0 +1,37 @@
+seed: 42
+tier: T4
+base_model: unsloth/Qwen2.5-3B-Instruct-bnb-4bit
+export_base_model: Qwen/Qwen2.5-3B-Instruct
+paths:
+  sft_data: data/sft/train.parquet
+  preference_data: data/pref/train.parquet
+  sft_adapter: adapters/sft-mini
+  dpo_adapter: adapters/dpo
+  screenshots: submission/screenshots
+  evaluation: submission/evaluation.json
+  benchmark: submission/benchmark.json
+sft:
+  dataset: bkai-foundation-models/vi-alpaca
+  samples: 1000
+  max_length: 512
+  epochs: 1
+  learning_rate: 0.0002
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  lora_r: 16
+  lora_alpha: 32
+dpo:
+  dataset: argilla/ultrafeedback-binarized-preferences-cleaned
+  samples: 2000
+  max_length: 512
+  max_prompt_length: 256
+  epochs: 1
+  learning_rate: 0.0000005
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  beta: 0.1
+  lora_r: 16
+  lora_alpha: 16
+generation:
+  max_new_tokens: 160
+  temperature: 0.0
