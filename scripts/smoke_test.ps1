@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
-set -euo pipefail
+$ErrorActionPreference = "Stop"
+
 pref-lab validate data/sample_preferences.jsonl
 pref-lab train --config configs/local.yaml
 pref-lab evaluate --config configs/local.yaml
-cat outputs/metrics.json
+Get-Content -Raw outputs/metrics.json

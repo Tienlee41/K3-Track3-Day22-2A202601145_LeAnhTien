@@ -9,4 +9,6 @@ training:
   max_length: 512
   batch_size: 2
 evaluation:
+  validation_ratio: 0.2
+  scorer: local  # no API key or model download required
   regression_prompts: docs/regression_prompts.md
