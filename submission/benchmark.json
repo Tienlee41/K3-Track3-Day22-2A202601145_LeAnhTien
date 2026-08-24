@@ -1,0 +1,147 @@
+{
+  "scope": "2-item smoke subset per suite; not official leaderboard scores",
+  "results": [
+    {
+      "suite": "IFEval-lite",
+      "prompt": "Trả lời đúng 3 gạch đầu dòng, mỗi dòng tối đa 8 từ: lợi ích của kiểm thử phần mềm.",
+      "expected": "three_short_bullets",
+      "model": "sft",
+      "response": "Kiểm thử phần mềm giúp phát hiện các lỗi và vấn đề trong quá trình phát triển, đảm bảo tính ổn định và chất lượng của sản phẩm.",
+      "score": 0.0
+    },
+    {
+      "suite": "IFEval-lite",
+      "prompt": "Trả lời chỉ bằng một câu có đúng 12 từ tiếng Việt về năng lượng mặt trời.",
+      "expected": "twelve_words",
+      "model": "sft",
+      "response": "Năng lượng mặt trời là nguồn năng lượng tái tạo sạch và khả năng cung cấp năng lượng cho các hệ thống điện năng lượng tái tạo.",
+      "score": 0.0
+    },
+    {
+      "suite": "GSM8K-lite",
+      "prompt": "Lan có 15 quả cam, cho bạn 1/3 rồi mua thêm 7 quả. Lan còn bao nhiêu quả? Chỉ ghi số cuối cùng.",
+      "expected": "17",
+      "model": "sft",
+      "response": "29",
+      "score": 0.0
+    },
+    {
+      "suite": "GSM8K-lite",
+      "prompt": "Một xe đi 60 km/h trong 2.5 giờ. Quãng đường là bao nhiêu km? Chỉ ghi số cuối cùng.",
+      "expected": "150",
+      "model": "sft",
+      "response": "300",
+      "score": 0.0
+    },
+    {
+      "suite": "MMLU-lite",
+      "prompt": "Đâu là đơn vị SI của lực? A. Joule B. Newton C. Watt D. Pascal. Chỉ trả lời chữ cái.",
+      "expected": "B",
+      "model": "sft",
+      "response": "B",
+      "score": 1.0
+    },
+    {
+      "suite": "MMLU-lite",
+      "prompt": "Overfitting thường biểu hiện thế nào? A. Train thấp, test cao B. Cả hai cao C. Train cao, test thấp D. Không học. Chỉ trả lời chữ cái.",
+      "expected": "C",
+      "model": "sft",
+      "response": "C",
+      "score": 1.0
+    },
+    {
+      "suite": "AlpacaEval-lite",
+      "prompt": "Giải thích ngắn gọn cách lập kế hoạch học Python trong 4 tuần cho người mới.",
+      "expected": "helpful",
+      "model": "sft",
+      "response": "Dưới đây là một cách để lập kế hoạch học Python trong 4 tuần cho người mới:\n\nTuần 1:\n- Xác định mục tiêu và mục tiêu cụ thể của bạn.\n- Tìm hiểu về cấu trúc cơ bản của Python và các khái niệm cơ bản như biến, toán tử, câu lệnh điều khiển.\n- Thực hành viết các chương trình đơn giản bằng Python.\n\nTuần 2:\n- Học về các cấu trúc dữ liệu cơ bản như danh sách, dictionary và tuple.\n- Tìm hiểu về các hàm và phương thức cơ bản trong Python.\n- Thực hành",
+      "score": 1.0
+    },
+    {
+      "suite": "AlpacaEval-lite",
+      "prompt": "Nêu ba cách kiểm chứng một thông tin đáng ngờ trên mạng.",
+      "expected": "helpful",
+      "model": "sft",
+      "response": "Để kiểm chứng một thông tin đáng ngờ trên mạng, bạn có thể thực hiện các bước sau:\n\n1. Kiểm tra nguồn gốc: Xem xét xem thông tin đó xuất phát từ đâu và có nguồn gốc đáng tin cậy hay không. Đọc kỹ các thông tin liên quan đến nguồn gốc của thông tin đó.\n\n2. Tìm kiếm thông tin độc lập: Tìm kiếm thông tin độc lập từ các nguồn khác nhau để so sánh và xác minh tính chính xác của thông tin đáng ngờ. Đọc các bài viết, tài liệu hoặc trang web khác",
+      "score": 1.0
+    },
+    {
+      "suite": "IFEval-lite",
+      "prompt": "Trả lời đúng 3 gạch đầu dòng, mỗi dòng tối đa 8 từ: lợi ích của kiểm thử phần mềm.",
+      "expected": "three_short_bullets",
+      "model": "dpo",
+      "response": "- Kiểm tra sớm phát hiện lỗi\n- Giảm chi phí sửa chữa sau này\n- Tăng chất lượng sản phẩm",
+      "score": 1.0
+    },
+    {
+      "suite": "IFEval-lite",
+      "prompt": "Trả lời chỉ bằng một câu có đúng 12 từ tiếng Việt về năng lượng mặt trời.",
+      "expected": "twelve_words",
+      "model": "dpo",
+      "response": "Năng lượng mặt trời là nguồn sạch, tái tạo hiệu quả cao.",
+      "score": 1.0
+    },
+    {
+      "suite": "GSM8K-lite",
+      "prompt": "Lan có 15 quả cam, cho bạn 1/3 rồi mua thêm 7 quả. Lan còn bao nhiêu quả? Chỉ ghi số cuối cùng.",
+      "expected": "17",
+      "model": "dpo",
+      "response": "10",
+      "score": 0.0
+    },
+    {
+      "suite": "GSM8K-lite",
+      "prompt": "Một xe đi 60 km/h trong 2.5 giờ. Quãng đường là bao nhiêu km? Chỉ ghi số cuối cùng.",
+      "expected": "150",
+      "model": "dpo",
+      "response": "60",
+      "score": 0.0
+    },
+    {
+      "suite": "MMLU-lite",
+      "prompt": "Đâu là đơn vị SI của lực? A. Joule B. Newton C. Watt D. Pascal. Chỉ trả lời chữ cái.",
+      "expected": "B",
+      "model": "dpo",
+      "response": "B",
+      "score": 1.0
+    },
+    {
+      "suite": "MMLU-lite",
+      "prompt": "Overfitting thường biểu hiện thế nào? A. Train thấp, test cao B. Cả hai cao C. Train cao, test thấp D. Không học. Chỉ trả lời chữ cái.",
+      "expected": "C",
+      "model": "dpo",
+      "response": "C",
+      "score": 1.0
+    },
+    {
+      "suite": "AlpacaEval-lite",
+      "prompt": "Giải thích ngắn gọn cách lập kế hoạch học Python trong 4 tuần cho người mới.",
+      "expected": "helpful",
+      "model": "dpo",
+      "response": "Lập kế hoạch học Python trong 4 tuần cho người mới có thể bao gồm các bước sau:\n\nTuần 1: \n- Tuần đầu tiên, bạn nên tập trung vào nền tảng cơ bản của Python. Học về cấu trúc chương trình, các kiểu dữ liệu cơ bản (ví dụ như số nguyên, số thực, chuỗi), và các phép toán cơ bản.\n- Bạn cũng nên tìm hiểu về các thư viện Python cơ bản như NumPy và Pandas, vì chúng rất hữu ích khi làm việc với dữ liệu.\n\nTuần 2:\n- Tiếp",
+      "score": 1.0
+    },
+    {
+      "suite": "AlpacaEval-lite",
+      "prompt": "Nêu ba cách kiểm chứng một thông tin đáng ngờ trên mạng.",
+      "expected": "helpful",
+      "model": "dpo",
+      "response": "Để kiểm chứng một thông tin đáng ngờ trên mạng, bạn có thể áp dụng các phương pháp sau:\n\n1. Kiểm tra nguồn gốc của thông tin: Thông tin đáng ngờ thường không có nguồn gốc rõ ràng hoặc không có dấu hiệu của một tổ chức hoặc cá nhân cụ thể. Bạn nên tìm kiếm nguồn gốc của thông tin đó. Nếu nguồn gốc không rõ ràng hoặc không có dấu hiệu là một tổ chức hoặc cá nhân đáng tin cậy, thì thông tin đó có thể không đáng tin cậy.\n\n2. Tìm kiếm thông tin độc lập: Nếu bạn thấy một thông tin",
+      "score": 1.0
+    }
+  ],
+  "summary": {
+    "sft": {
+      "AlpacaEval-lite": 1.0,
+      "GSM8K-lite": 0.0,
+      "IFEval-lite": 0.0,
+      "MMLU-lite": 1.0
+    },
+    "dpo": {
+      "AlpacaEval-lite": 1.0,
+      "GSM8K-lite": 0.0,
+      "IFEval-lite": 1.0,
+      "MMLU-lite": 1.0
+    }
+  }
+}
