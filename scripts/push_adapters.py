@@ -3,8 +3,18 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from gpu_common import load_gpu_config, save_json
+import yaml
 from huggingface_hub import HfApi, get_token
+
+
+def load_config(path: Path = Path("configs/gpu.yaml")) -> dict[str, object]:
+    return yaml.safe_load(path.read_text(encoding="utf-8"))
+
+
+def save_json(path: str | Path, payload: dict[str, object]) -> None:
+    target = Path(path)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
 def main() -> None:
@@ -13,7 +23,7 @@ def main() -> None:
         raise SystemExit("Hugging Face authentication is required for the professional bonus")
     api = HfApi(token=token)
     username = api.whoami()["name"]
-    config = load_gpu_config()
+    config = load_config()
     repositories = {
         "sft": f"{username}/day22-qwen25-3b-sft-mini",
         "dpo": f"{username}/day22-qwen25-3b-dpo",

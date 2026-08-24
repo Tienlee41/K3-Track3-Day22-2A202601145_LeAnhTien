@@ -1,0 +1,12 @@
+{
+  "owner": "tiennn",
+  "repositories": {
+    "sft": "https://huggingface.co/tiennn/day22-qwen25-3b-sft-mini",
+    "dpo": "https://huggingface.co/tiennn/day22-qwen25-3b-dpo"
+  },
+  "revisions": {
+    "sft": "4da5b45f53e55d196e008ce99f37080a5c6ebf09",
+    "dpo": "c2c634839b84494c0cdf8c7700c39be6f2496fdf"
+  },
+  "visibility": "public"
+}

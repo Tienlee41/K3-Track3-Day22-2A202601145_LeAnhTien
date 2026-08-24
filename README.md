@@ -63,6 +63,13 @@ Training commands accept `--reuse` to preserve completed artifacts during docume
 - `submission/REFLECTION.md` with the six required sections and optional benchmark analysis.
 - Bonus `gguf/lab22-dpo-Q4_K_M.gguf`, benchmark report, and public Hugging Face adapter links.
 
+## Published bonus artifacts
+
+- SFT adapter: [tiennn/day22-qwen25-3b-sft-mini](https://huggingface.co/tiennn/day22-qwen25-3b-sft-mini)
+- DPO adapter: [tiennn/day22-qwen25-3b-dpo](https://huggingface.co/tiennn/day22-qwen25-3b-dpo)
+- GGUF smoke evidence: `submission/deploy.json` and `submission/llama_smoke.stdout.txt`
+- Lightweight benchmark: `submission/benchmark.json`
+
 Model weights, checkpoints, merged models, and GGUF binaries are intentionally ignored by Git. The
 small adapter configs, metrics, plots, notebooks, and submission evidence are versioned; adapter
 weights remain present locally and are published through the professional Hugging Face bonus.

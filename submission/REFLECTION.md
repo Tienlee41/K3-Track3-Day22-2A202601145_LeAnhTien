@@ -51,3 +51,5 @@ Quyết định có ảnh hưởng lớn nhất trong bài là không đánh gi�
 ## 7. Benchmark (Optional)
 
 Benchmark ở đây chỉ là các tập `-lite`, không phải điểm leaderboard chính thức. DPO đạt 1.0 trên IFEval-lite, MMLU-lite và AlpacaEval-lite nhưng 0.0 trên GSM8K-lite; SFT đạt 0.0 trên IFEval-lite và GSM8K-lite, 1.0 trên MMLU-lite và AlpacaEval-lite. Tín hiệu nhỏ này gợi ý DPO cải thiện instruction following trong các ví dụ đã chọn mà chưa tạo alignment tax rõ ở MMLU/AlpacaEval. Tuy vậy, GSM8K của cả hai đều yếu và số mẫu quá nhỏ để suy rộng. Cần benchmark chuẩn, nhiều mẫu và confidence interval trước khi đưa ra kết luận về năng lực tổng quát.
+
+Phần deployment tạo thành công `lab22-dpo-Q4_K_M.gguf` dung lượng 1.797 GiB. Smoke test bằng llama.cpp sinh câu tiếng Việt mạch lạc giải thích đúng khái niệm học máy; log nguyên bản và payload kiểm tra được lưu trong `submission/`. Hai LoRA adapter cũng được publish public tại `tiennn/day22-qwen25-3b-sft-mini` và `tiennn/day22-qwen25-3b-dpo`, kèm revision SHA trong `submission/huggingface.json` để có thể đối chiếu đúng phiên bản đã nộp.
