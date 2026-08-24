@@ -18,3 +18,10 @@ Replace mock scores with model-derived scores or a deterministic scorer for CPU 
 
 ## Task 4: Report
 Write a short report with dataset notes, config, metrics, and failure modes.
+
+## Local-GPU submission track
+
+The completed T4-tier workflow is documented in the root `README.md`. It adds Vietnamese SFT-mini,
+2,000 cleaned UltraFeedback pairs, real DPO training, eight-prompt qualitative comparison, six
+screenshots, five executed notebooks, and the optional benchmark/GGUF/Hugging Face deliverables.
+Run `make smoke` before GPU work and `make verify` after all artifacts have been generated.
