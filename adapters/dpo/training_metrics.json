@@ -1,0 +1,331 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5060 Ti",
+  "vram_total_gb": 15.93,
+  "cuda_runtime": "12.8",
+  "torch": "2.9.0+cu128",
+  "base_model": "unsloth/Qwen2.5-3B-Instruct-bnb-4bit",
+  "dataset": "argilla/ultrafeedback-binarized-preferences-cleaned",
+  "samples": 2000,
+  "epochs": 1.0,
+  "beta": 0.1,
+  "learning_rate": 5e-07,
+  "batch_size": 1,
+  "gradient_accumulation_steps": 8,
+  "reference_cache_reused": false,
+  "runtime_seconds": 2777.403,
+  "train_loss": 0.676107983827591,
+  "peak_vram_gb": 4.932,
+  "reward_history": [
+    {
+      "step": 1,
+      "chosen_reward": -0.03352358192205429,
+      "rejected_reward": -0.016519809141755104,
+      "reward_gap": -0.017003774642944336
+    },
+    {
+      "step": 5,
+      "chosen_reward": -0.010494565591216087,
+      "rejected_reward": -2.0937062799930573e-05,
+      "reward_gap": -0.010473629459738731
+    },
+    {
+      "step": 10,
+      "chosen_reward": -0.009262161329388618,
+      "rejected_reward": -0.01341431587934494,
+      "reward_gap": 0.00415215315297246
+    },
+    {
+      "step": 15,
+      "chosen_reward": -0.020518258213996887,
+      "rejected_reward": -0.014694005250930786,
+      "reward_gap": -0.005824255757033825
+    },
+    {
+      "step": 20,
+      "chosen_reward": -0.010024862363934517,
+      "rejected_reward": -0.0007050983840599656,
+      "reward_gap": -0.009319763630628586
+    },
+    {
+      "step": 25,
+      "chosen_reward": -0.008101492188870907,
+      "rejected_reward": -0.023968296125531197,
+      "reward_gap": 0.015866804867982864
+    },
+    {
+      "step": 30,
+      "chosen_reward": 0.009036736562848091,
+      "rejected_reward": -0.039444517344236374,
+      "reward_gap": 0.048481255769729614
+    },
+    {
+      "step": 35,
+      "chosen_reward": -0.015458750538527966,
+      "rejected_reward": -0.03788747638463974,
+      "reward_gap": 0.0224287286400795
+    },
+    {
+      "step": 40,
+      "chosen_reward": -0.0017091803019866347,
+      "rejected_reward": -0.0639575645327568,
+      "reward_gap": 0.062248386442661285
+    },
+    {
+      "step": 45,
+      "chosen_reward": -0.011441831476986408,
+      "rejected_reward": -0.034485459327697754,
+      "reward_gap": 0.02304362878203392
+    },
+    {
+      "step": 50,
+      "chosen_reward": -0.023670002818107605,
+      "rejected_reward": -0.04624344781041145,
+      "reward_gap": 0.02257344499230385
+    },
+    {
+      "step": 55,
+      "chosen_reward": -0.0038603204302489758,
+      "rejected_reward": -0.04148801043629646,
+      "reward_gap": 0.0376276895403862
+    },
+    {
+      "step": 60,
+      "chosen_reward": -0.033662088215351105,
+      "rejected_reward": -0.07358548790216446,
+      "reward_gap": 0.03992339223623276
+    },
+    {
+      "step": 65,
+      "chosen_reward": -0.03801172226667404,
+      "rejected_reward": -0.03655201196670532,
+      "reward_gap": -0.001459714025259018
+    },
+    {
+      "step": 70,
+      "chosen_reward": -0.055451057851314545,
+      "rejected_reward": -0.06403116136789322,
+      "reward_gap": 0.008580097928643227
+    },
+    {
+      "step": 75,
+      "chosen_reward": -0.034783847630023956,
+      "rejected_reward": -0.040184251964092255,
+      "reward_gap": 0.005400399211794138
+    },
+    {
+      "step": 80,
+      "chosen_reward": -0.035862214863300323,
+      "rejected_reward": -0.06795541942119598,
+      "reward_gap": 0.03209320455789566
+    },
+    {
+      "step": 85,
+      "chosen_reward": -0.0554722435772419,
+      "rejected_reward": -0.06931693106889725,
+      "reward_gap": 0.013844693079590797
+    },
+    {
+      "step": 90,
+      "chosen_reward": -0.04099033772945404,
+      "rejected_reward": -0.07716386765241623,
+      "reward_gap": 0.036173541098833084
+    },
+    {
+      "step": 95,
+      "chosen_reward": -0.02427513338625431,
+      "rejected_reward": -0.051597315818071365,
+      "reward_gap": 0.027322182431817055
+    },
+    {
+      "step": 100,
+      "chosen_reward": 0.0007651932537555695,
+      "rejected_reward": -0.06855867803096771,
+      "reward_gap": 0.06932388246059418
+    },
+    {
+      "step": 105,
+      "chosen_reward": -0.08553226292133331,
+      "rejected_reward": -0.05862007662653923,
+      "reward_gap": -0.026912186294794083
+    },
+    {
+      "step": 110,
+      "chosen_reward": -0.030511196702718735,
+      "rejected_reward": -0.07042019069194794,
+      "reward_gap": 0.039908986538648605
+    },
+    {
+      "step": 115,
+      "chosen_reward": -0.04707731306552887,
+      "rejected_reward": -0.10371410846710205,
+      "reward_gap": 0.05663679167628288
+    },
+    {
+      "step": 120,
+      "chosen_reward": -0.03717639669775963,
+      "rejected_reward": -0.08715351670980453,
+      "reward_gap": 0.04997711628675461
+    },
+    {
+      "step": 125,
+      "chosen_reward": -0.026078641414642334,
+      "rejected_reward": -0.08865741640329361,
+      "reward_gap": 0.06257878243923187
+    },
+    {
+      "step": 130,
+      "chosen_reward": -0.04101479426026344,
+      "rejected_reward": -0.08670743554830551,
+      "reward_gap": 0.04569264501333237
+    },
+    {
+      "step": 135,
+      "chosen_reward": -0.02414463460445404,
+      "rejected_reward": -0.08102412521839142,
+      "reward_gap": 0.05687948316335678
+    },
+    {
+      "step": 140,
+      "chosen_reward": -0.039932217448949814,
+      "rejected_reward": -0.09564772248268127,
+      "reward_gap": 0.05571550130844116
+    },
+    {
+      "step": 145,
+      "chosen_reward": -0.0657355785369873,
+      "rejected_reward": -0.1304934322834015,
+      "reward_gap": 0.06475785374641418
+    },
+    {
+      "step": 150,
+      "chosen_reward": -0.021246394142508507,
+      "rejected_reward": -0.09818270057439804,
+      "reward_gap": 0.07693631201982498
+    },
+    {
+      "step": 155,
+      "chosen_reward": -0.034177497029304504,
+      "rejected_reward": -0.08065097779035568,
+      "reward_gap": 0.046473484486341476
+    },
+    {
+      "step": 160,
+      "chosen_reward": -0.055549491196870804,
+      "rejected_reward": -0.08428935706615448,
+      "reward_gap": 0.028739864006638527
+    },
+    {
+      "step": 165,
+      "chosen_reward": -0.02060757763683796,
+      "rejected_reward": -0.09688197076320648,
+      "reward_gap": 0.07627439498901367
+    },
+    {
+      "step": 170,
+      "chosen_reward": -0.03172136843204498,
+      "rejected_reward": -0.14313896000385284,
+      "reward_gap": 0.11141760647296906
+    },
+    {
+      "step": 175,
+      "chosen_reward": -0.02100767195224762,
+      "rejected_reward": -0.1260405033826828,
+      "reward_gap": 0.10503282397985458
+    },
+    {
+      "step": 180,
+      "chosen_reward": -0.07819543778896332,
+      "rejected_reward": -0.11836566776037216,
+      "reward_gap": 0.040170226246118546
+    },
+    {
+      "step": 185,
+      "chosen_reward": -0.07430731505155563,
+      "rejected_reward": -0.1371600329875946,
+      "reward_gap": 0.06285271048545837
+    },
+    {
+      "step": 190,
+      "chosen_reward": -0.0494864396750927,
+      "rejected_reward": -0.06480772793292999,
+      "reward_gap": 0.015321287326514721
+    },
+    {
+      "step": 195,
+      "chosen_reward": -0.0676158219575882,
+      "rejected_reward": -0.07894059270620346,
+      "reward_gap": 0.011324767954647541
+    },
+    {
+      "step": 200,
+      "chosen_reward": -0.04670988395810127,
+      "rejected_reward": -0.10073332488536835,
+      "reward_gap": 0.05402343347668648
+    },
+    {
+      "step": 205,
+      "chosen_reward": -0.06346262991428375,
+      "rejected_reward": -0.15279249846935272,
+      "reward_gap": 0.08932986855506897
+    },
+    {
+      "step": 210,
+      "chosen_reward": -0.030873265117406845,
+      "rejected_reward": -0.09390497952699661,
+      "reward_gap": 0.06303171068429947
+    },
+    {
+      "step": 215,
+      "chosen_reward": -0.059276264160871506,
+      "rejected_reward": -0.08913745731115341,
+      "reward_gap": 0.029861200600862503
+    },
+    {
+      "step": 220,
+      "chosen_reward": -0.05649403855204582,
+      "rejected_reward": -0.09050212800502777,
+      "reward_gap": 0.03400808200240135
+    },
+    {
+      "step": 225,
+      "chosen_reward": -0.043596088886260986,
+      "rejected_reward": -0.11942634731531143,
+      "reward_gap": 0.07583026587963104
+    },
+    {
+      "step": 230,
+      "chosen_reward": -0.044916070997714996,
+      "rejected_reward": -0.08730051666498184,
+      "reward_gap": 0.04238443821668625
+    },
+    {
+      "step": 235,
+      "chosen_reward": -0.040232084691524506,
+      "rejected_reward": -0.09203195571899414,
+      "reward_gap": 0.05179986357688904
+    },
+    {
+      "step": 240,
+      "chosen_reward": -0.07004696875810623,
+      "rejected_reward": -0.0907648578286171,
+      "reward_gap": 0.020717905834317207
+    },
+    {
+      "step": 245,
+      "chosen_reward": -0.027682553976774216,
+      "rejected_reward": -0.09057358652353287,
+      "reward_gap": 0.06289102882146835
+    },
+    {
+      "step": 250,
+      "chosen_reward": -0.03550771623849869,
+      "rejected_reward": -0.049041587859392166,
+      "reward_gap": 0.013533873483538628
+    }
+  ],
+  "initial_reward_gap": -0.017003774642944336,
+  "final_reward_gap": 0.013533873483538628,
+  "reward_gap_trend_window": 5,
+  "initial_reward_gap_trend": -0.0076938540674746,
+  "final_reward_gap_trend": 0.0382654219865799
+}
