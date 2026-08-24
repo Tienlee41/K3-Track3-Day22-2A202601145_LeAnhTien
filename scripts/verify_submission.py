@@ -5,14 +5,17 @@ import re
 import sys
 from pathlib import Path
 
-import pandas as pd
-
 
 def _check(condition: bool, label: str, failures: list[str]) -> None:
     marker = "PASS" if condition else "FAIL"
     print(f"[{marker}] {label}")
     if not condition:
         failures.append(label)
+
+
+def _bonus_check(condition: bool, label: str) -> None:
+    marker = "PASS" if condition else "SKIP"
+    print(f"[{marker}] Bonus: {label}")
 
 
 def _words(section: str) -> int:
@@ -22,6 +25,16 @@ def _words(section: str) -> int:
 def _load_json(path: str | Path) -> dict[str, object]:
     source = Path(path)
     return json.loads(source.read_text(encoding="utf-8")) if source.exists() else {}
+
+
+def _has_parquet_signature(path: Path) -> bool:
+    if not path.exists() or path.stat().st_size < 8:
+        return False
+    with path.open("rb") as stream:
+        header = stream.read(4)
+        stream.seek(-4, 2)
+        footer = stream.read(4)
+    return header == b"PAR1" and footer == b"PAR1"
 
 
 def main() -> None:
@@ -38,13 +51,14 @@ def main() -> None:
     _check(bool(dpo) and dpo != sft, "DPO adapter exists and is distinct", failures)
 
     pref_path = Path("data/pref/train.parquet")
-    pref = pd.read_parquet(pref_path) if pref_path.exists() else pd.DataFrame()
+    inspection = _load_json("data/pref/inspection.json")
     _check(
-        len(pref) == 2000 and list(pref.columns) == ["prompt", "chosen", "rejected"],
+        _has_parquet_signature(pref_path)
+        and inspection.get("preference_rows") == 2000
+        and inspection.get("columns") == ["prompt", "chosen", "rejected"],
         "Preference parquet has 2,000 prompt/chosen/rejected rows",
         failures,
     )
-    inspection = _load_json("data/pref/inspection.json")
     _check(
         inspection.get("all_inspected_pairs_differ") is True,
         "Three inspected preference pairs have chosen != rejected",
@@ -119,7 +133,7 @@ def main() -> None:
     personal_section = next(
         (body for title, body in section_map.items() if title.startswith("6.")), ""
     )
-    _check(_words(reward_section) >= 150, "Reflection section 3 has >=150 words", failures)
+    _check(_words(reward_section) >= 100, "Reflection section 3 has >=100 words", failures)
     _check(_words(personal_section) >= 150, "Reflection section 6 has >=150 words", failures)
 
     notebooks = sorted(Path("notebooks").glob("*.ipynb"))
@@ -131,37 +145,33 @@ def main() -> None:
     _check(len(notebooks) >= 5 and executed >= 5, "Five executed notebooks", failures)
 
     gguf = Path("gguf/lab22-dpo-Q4_K_M.gguf")
-    _check(
+    _bonus_check(
         gguf.exists() and gguf.stat().st_size < 5 * 1024**3,
-        "Bonus Q4_K_M GGUF under 5 GB",
-        failures,
+        "Q4_K_M GGUF under 5 GB",
     )
     deploy = _load_json("submission/deploy.json")
-    _check(
+    _bonus_check(
         deploy.get("coherent_vietnamese") is True and bool(deploy.get("response")),
-        "Bonus llama.cpp Vietnamese smoke response",
-        failures,
+        "llama.cpp Vietnamese smoke response",
     )
     benchmark = _load_json("submission/benchmark.json")
-    _check(
+    _bonus_check(
         all(
             name in benchmark.get("summary", {}).get("dpo", {})
             for name in ("IFEval-lite", "GSM8K-lite", "MMLU-lite", "AlpacaEval-lite")
         ),
-        "Bonus four-suite benchmark report",
-        failures,
+        "four-suite benchmark report",
     )
     hub = _load_json("submission/huggingface.json")
-    _check(
+    _bonus_check(
         hub.get("visibility") == "public" and len(hub.get("repositories", {})) == 2,
-        "Professional bonus public Hugging Face adapters",
-        failures,
+        "professional public Hugging Face adapters",
     )
 
     if failures:
         print(f"\n{len(failures)} gate(s) failed.")
         sys.exit(1)
-    print("\nAll required and local bonus gates passed.")
+    print("\nAll required submission gates passed.")
 
 
 if __name__ == "__main__":

@@ -44,7 +44,7 @@ make eval           # 8 prompts x SFT/DPO + win/loss/tie
 make deploy         # optional merged Q4_K_M GGUF + llama.cpp smoke
 make bench          # optional IFEval/GSM8K/MMLU/AlpacaEval-lite subsets
 make notebooks      # build five executed evidence notebooks
-make verify         # all mandatory and local bonus gates
+make verify         # required gates; optional bonus status is reported separately
 ```
 
 On Windows without GNU Make, invoke the corresponding Python scripts shown in the `Makefile`.
